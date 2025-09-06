@@ -92,7 +92,7 @@ def ouvir_microfone(primeira_vez):
 # Função para pesquisar no Google usando a API de IA
 def pesquisar_no_google(pesquisa):
   # Configurando a API do Google
-  GOOGLE_AI_KEY = "SUA CHAVE API AKI"
+  GOOGLE_AI_KEY = "SUA_CHAVE_API_AQUI"
   genai.configure(api_key=GOOGLE_AI_KEY)
   # Configurando a Temperatura das Respostas
   configurar_geracao = {
