@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JARVIS - Assistente Virtual</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <div class="jarvis-logo">
+                <h1>JARVIS</h1>
+                <p>Assistente Virtual Inteligente</p>
+            </div>
+            
+            <div class="status">
+                <h3>Status do Sistema</h3>
+                <div class="status-indicator">
+                    <div class="status-dot"></div>
+                    <span>Online</span>
+                </div>
+                <p>Sistema operacional</p>
+            </div>
+
+            <div class="controls">
+                <button class="control-btn" onclick="toggleVoice()">🎤 Ativar Voz</button>
+                <button class="control-btn" onclick="clearChat()">🗑️ Limpar Chat</button>
+                <button class="control-btn" onclick="showSystemInfo()">ℹ️ Informações</button>
+                <button class="control-btn" onclick="toggleTheme()">🌙 Tema</button>
+            </div>
+
+            <div class="system-info">
+                <h4>Informações do Sistema</h4>
+                <div class="info-item">
+                    <span class="info-label">Versão:</span>
+                    <span class="info-value">2.0.1</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Status:</span>
+                    <span class="info-value">Ativo</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Uptime:</span>
+                    <span class="info-value" id="uptime">00:00:00</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="chat-container" id="chatContainer">
+                <div class="chat-message jarvis-message">
+                    <strong>JARVIS:</strong> Olá! Sou o JARVIS, seu assistente virtual. Como posso ajudá-lo hoje?
+                </div>
+            </div>
+
+            <div class="input-container">
+                <input type="text" class="message-input" id="messageInput" placeholder="Digite sua mensagem ou use o comando de voz..." onkeypress="handleKeyPress(event)">
+                <button class="send-btn" onclick="sendMessage()">➤</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="voice-indicator" id="voiceIndicator">
+        <div style="font-size: 48px;">🎤</div>
+        <div class="voice-text">Escutando...</div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
